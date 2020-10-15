@@ -45,31 +45,24 @@ const [spinnerOn, setSpinnerOn] = useState(true);
 
   const toggleSpinner = () => {
   /* STEP 4 */
-  setSpinnerOn(spinnerOn);
+  setSpinnerOn(!spinnerOn);
   };
 
-  let onOff;
-  if (spinnerOn === true) {
-    onOff = true;
-  } else {
-    onOff = false;
-  };
-  
   let hideShow;
   if (spinnerOn === true) {
-    hideShow = `hide`;
+    hideShow = 'Hide';
   } else {
-    hideShow = `show`;
+    hideShow = 'Show';
   };
 
   return (
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
-        onOff && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
+        spinnerOn && <div id='spinner' className='spinner'>--+--</div> /* STEP 2 */
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
-        {hideShow} {/* STEP 3 */}
+        {(hideShow)} Spinner {/* STEP 3 */}
       </button>
     </div>
   );

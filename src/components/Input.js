@@ -72,9 +72,9 @@ const [inputValue, setInputValue] = useState("");
     <div className='widget-input container'>
       <h2>Input</h2>
       <div id='output' style={style}>
-        {inputValue.toUpperCase}</div> {/* STEP 3 */}
+        {inputValue.toUpperCase()}</div> {/* STEP 3 */}
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' value={inputValue} onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
